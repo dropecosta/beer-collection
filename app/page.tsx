@@ -1,20 +1,25 @@
 "use client"
 
-import React, { FC, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { BeerCard } from "@/components/BeerCard";
-import ReactPaginate from "react-paginate";
-import { BeerList } from '@/components/BeerList';
-import { UseBeersProps, getBeers } from "@/service/request";
-import { useSearchParams } from 'next/navigation';
+import { getBeers } from "@/service/request";
 
+const Home: React.FC = () => {
+  const [allBeers, setAllBeers] = useState<any[]>([]);
 
-const Home = async (props: UseBeersProps) => {
-  const [queryObject, setQueryObject] = useState<UseBeersProps>(props);
+  useEffect(() => {
+    async function fetchBeers() {
+      try {
+        const fetchedBeers = await getBeers();
+        setAllBeers(fetchedBeers);
+      } catch (error) {
+        console.error("Error fetching beers:", error);
+      }
+    }
 
+    fetchBeers();
+  }, []);
 
-  const allBeers = await getBeers();
-  //console.log("allBeers", allBeers);
-  
   return (
     <main className="overflow-hidden">
       <div className="mt-12 padding-x padding-y max-width" id="discover">
@@ -25,10 +30,9 @@ const Home = async (props: UseBeersProps) => {
 
         <section>
           <div className="home__beers-wrapper">
-            {allBeers?.map((beer: any) => (
+            {allBeers.map((beer: any) => (
               <BeerCard beer={beer} key={beer.id}/>
             ))}
-           
           </div>
         </section>
       </div>
@@ -36,5 +40,5 @@ const Home = async (props: UseBeersProps) => {
   );
 };
 
-export default Home
+export default Home;
 

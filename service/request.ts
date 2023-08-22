@@ -1,4 +1,3 @@
-import { SearchBeerParams } from "@/Types/types";
 import axios from "axios";
 
 const addBeer = async (formData: FormData | Object) => {
@@ -20,11 +19,6 @@ const addBeer = async (formData: FormData | Object) => {
     };
   }
 };
-
-export interface UseBeersProps {
-  beerIds?: number[];
-  queryParams?: SearchBeerParams;
-}
 
 const getBeers = async () => {
   const headers = {
