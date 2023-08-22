@@ -1,8 +1,8 @@
 import dbConnect from "@/lib/dbConnect";
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 import { BeerModel } from "@/models/beer";
 
-export const POST = async (req: { json: () => any; }, res: any) => {
+export const POST = async (req: Request | NextRequest, res: any) => {
     await dbConnect();
     try {
         const body = await req.json();
