@@ -22,7 +22,7 @@ interface BeerCardProps {
 const BeerCard: React.FC<BeerCardProps> = ({ beer }) => {
   const { id, name, tagline, image_url, ebc, abv, ibu } = beer;
 
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState<boolean>(false);
 
   return (
     <article className="beer-card group">
@@ -34,9 +34,10 @@ const BeerCard: React.FC<BeerCardProps> = ({ beer }) => {
         <Image
           src={image_url}
           className="beer-card__img"
-          alt="beer image"
+          alt="beer-image"
           fill
           sizes="100%"
+          priority
         />
       </div>
       <section className="relative flex w-full mt-10">

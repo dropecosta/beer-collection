@@ -8,6 +8,16 @@ interface BeerDetailsProps {
   onAddBeer: (newBeer: any) => void;
 }
 
+interface BeerFormData {
+  name: string;
+  tagline: string;
+  image_url: string;
+  ebc: string;
+  abv: string;
+  ibu: string;
+  food_pairing: string[];
+}
+
 const foodListExample = [
   "Aged Balsamic Glaze",
   "Baked Alaskan Wild Rice Casserole",
@@ -19,7 +29,7 @@ const AddBeerForm: React.FC<BeerDetailsProps> = ({
   closeModal,
   onAddBeer,
 }) => {
-  const [beerInfo, setBeerInfo] = useState({
+  const [beerInfo, setBeerInfo] = useState<BeerFormData>({
     name: "",
     tagline: "",
     image_url: "/bottle.png",

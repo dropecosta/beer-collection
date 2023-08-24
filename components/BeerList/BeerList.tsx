@@ -4,8 +4,9 @@ import React, { useEffect } from "react";
 import { getBeers } from "@/service/request";
 import { useBeerContext } from "@/app/context/context";
 import { BeerCard } from "../BeerCard";
+import { BeerListProps } from "@/Types/beerType";
 
-const BeerList: React.FC<any> = () => {
+const BeerList: React.FC<BeerListProps> = () => {
   const { beersArray, setBeersArray, searchTerm, ph, abv } = useBeerContext();
 
   useEffect(() => {
@@ -43,7 +44,7 @@ const BeerList: React.FC<any> = () => {
   return (
     <>    
       {!isDataEmpty ? (
-        filterResults.map((beer: any, index: any) => <BeerCard beer={beer} key={index} />)
+        filterResults.map((beer: BeerListProps, index: number) => <BeerCard beer={beer} key={index} />)
       ) : (
         <div>
           <h2>Loading beers...</h2>

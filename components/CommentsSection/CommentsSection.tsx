@@ -32,7 +32,7 @@ interface CommentProps {
         <div className="mt-4">
           <h3>Comments:</h3>
           <ul>
-            {comments.map((comment: any, index: any) => (
+            {comments.map((comment: string, index: number) => (
               <li className="comments__li" key={index}>
                 {comment}
               </li>

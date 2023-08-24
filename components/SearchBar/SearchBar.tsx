@@ -1,6 +1,11 @@
 import React from 'react';
 
-const SearchBar = (props: any) => {
+interface SearchBarProps {
+    searchTerm: string;
+    handleInput: (event: React.ChangeEvent<HTMLInputElement>) => void;
+};
+
+const SearchBar: React.FC<SearchBarProps> = (props: any) => {
 
     const {searchTerm, handleInput} = props;
 

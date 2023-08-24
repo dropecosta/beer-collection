@@ -57,7 +57,7 @@ const NavBar = () => {
 
   return (
     <header className="w-full">
-      <nav className="max-w-[1440px] mx-auto flex xl:justify-between justify-center sm:items-center xl:flex-row flex-col sm:h-[300px] items-center sm:px-16 px-6 bg-transparent">
+      <nav className="navbar__container">
         <Link href="/" className="flex justify-center items-center">
           <div className="navbar__title">
           <h1 className="navbar__title-h1">Beer Gallery</h1>

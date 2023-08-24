@@ -1,7 +1,15 @@
 import Image from "next/image";
 
 interface BeerInfoProps {
-  beer: any;
+  beer: {
+    name: string;
+    tagline: string;
+    description: string;
+    abv: number;
+    ibu: number;
+    ebc: number;
+    food_pairing: string[];
+  };
 }
 
 const BeerInfo: React.FC<BeerInfoProps> = ({ beer }) => {

@@ -44,6 +44,9 @@
 
 
 /* Navbar styles */
+.navbar__container {
+  @apply max-w-[1440px] mx-auto flex xl:justify-between justify-center sm:items-center xl:flex-row flex-col sm:h-[300px] xl:h-[150px] xl:mt-0 mt-[30px] items-center sm:px-16 px-6 bg-transparent
+}
 
 .navbar__title {
   @apply flex flex-col items-start justify-start text-black-100;
@@ -67,9 +70,8 @@
 }
 
 .searchbar__input {
-  @apply xl:w-[600px] w-full h-[48px] pl-12 p-4 bg-primary-blue-100 rounded-r-full rounded-l-full rounded-full outline-none cursor-pointer text-sm;
+  @apply xl:w-[550px] w-full h-[48px] pl-12 p-4 bg-primary-blue-100 rounded-r-full rounded-l-full rounded-full outline-none cursor-pointer text-sm;
 }
-
 
 /* BeerCard styles */
 .beer-card {
@@ -170,7 +172,6 @@
 }
 
 /* FilterList styles */
-
 .filters__list {
   @apply xl:w-[220px] sm:w-[100vw] w-[80vw] flex xl:flex-col sm:flex-row flex-col sm:justify-center
 }
