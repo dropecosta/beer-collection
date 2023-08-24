@@ -24,15 +24,13 @@ const BeerCard: React.FC<BeerCardProps> = ({ beer }) => {
 
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
-  
-
-function truncateText(text: string, maxLength: number) {
-  if (text.length <= maxLength) {
-    return text;
-  } else {
-    return text.slice(0, maxLength) + '...';
-  }
-}
+  const truncateText = (text: string, maxLength: number) => {
+    if (text.length <= maxLength) {
+      return text;
+    } else {
+      return text.slice(0, maxLength) + '...';
+    };
+  };
 
   return (
     <article className="beer-card group">
