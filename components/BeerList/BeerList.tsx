@@ -14,6 +14,7 @@ const BeerList: React.FC<BeerListProps> = () => {
       try {
         const fetchedBeers = await getBeers();
         setBeersArray(fetchedBeers);
+        console.log(fetchedBeers)
       } catch (error) {
         console.error("Error fetching beers:", error);
       }
