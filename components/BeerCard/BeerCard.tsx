@@ -59,7 +59,7 @@ const BeerCard: React.FC<BeerCardProps> = ({ beer }) => {
           <div className="beer-card__btn-container">
             <Button
               title="View More"
-              containerStyles="w-full py-[16px] rounded-full bg-primary-blue group-hover:visible"
+              containerStyles="w-full py-[16px] rounded-full bg-gray-400 group-hover:visible"
               textStyles="text-white text-[14px] leading-[17px] font-bold"
               handleClick={() => setIsOpen(true)}
             />

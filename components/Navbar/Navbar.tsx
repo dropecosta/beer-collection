@@ -52,7 +52,7 @@ const NavBar = () => {
   const addNewBeer = (newBeer: Beer) => {
     const updatedBeersArray = [newBeer, ...beersArray];
     setBeersArray(updatedBeersArray);
-    localStorage.setItem('beersArray', JSON.stringify(updatedBeersArray)); // Store in localStorage
+    localStorage.setItem('beersArray', JSON.stringify(updatedBeersArray));
   };
 
   return (

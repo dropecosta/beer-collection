@@ -1,15 +1,17 @@
-import Image from "next/image";
 import Link from "next/link";
 
 const Footer = () => (
-  <footer className='flex flex-col text-black-100  mt-5 border-t border-gray-100 max-width'>
-    <div className='flex justify-between items-center flex-wrap mt-10 border-t border-gray-100 sm:px-16 px-6 py-10'>
+  <footer className='footer__container'>
+    <div className='footer__content'>
       <p>@2023 - Powered by Punk API</p>
 
-      <div className="footer__copyrights-link">
-        <Link href="https://www.linkedin.com/in/dropecosta/" target="_blank" className="text-gray-500">
-          Pedro Reis
-        </Link>
+      <div className="footer__signature">
+        <p>
+          Developed with 🧡 by &nbsp;
+          <Link href="https://www.linkedin.com/in/dropecosta/" target="_blank" className="footer__signature-link">
+           Pedro Reis
+          </Link>
+        </p>
       </div>
     </div>
   </footer>

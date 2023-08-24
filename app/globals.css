@@ -154,7 +154,7 @@
 }
 
 .comments__button {
-  @apply bg-blue-500 text-white px-4 py-2 rounded-md mt-5 mb-4;
+  @apply bg-gray-400 text-white px-4 py-2 rounded-md mt-5 mb-4;
 }
 
 .comments__li {
@@ -168,7 +168,7 @@
 }
 
 .add-beer-form__button {
-  @apply bg-blue-500 text-white px-4 py-2 rounded-md mt-5 mb-4;
+  @apply bg-gray-400 text-white px-4 py-2 rounded-md mt-5 mb-4;
 }
 
 /* FilterList styles */
@@ -187,3 +187,22 @@
 .filter__label {
   @apply text-[13px] text-gray-600 p-4 mt-2 mb-2;
 }
+
+/* Footer styles */
+.footer__container {
+  @apply flex flex-col text-black-100  mt-5 border-t border-gray-100 max-width text-[12px];
+}
+
+.footer__content {
+  @apply flex sm:flex-row flex-col justify-between items-center flex-wrap mt-10 border-t border-gray-100 sm:px-16 px-6 py-10;
+}
+
+.footer__signature {
+  @apply text-[13px] sm:mt-0 mt-1;
+}
+
+.footer__signature-link {
+  @apply text-gray-500 hover:underline;
+}
+
+

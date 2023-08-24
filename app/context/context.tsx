@@ -2,7 +2,6 @@
 
 import React, { createContext, useContext, useState, ReactNode } from "react";
 
-// Define the type for your context value
 type BeerContextType = {
   beersArray: any[];
   setBeersArray: React.Dispatch<React.SetStateAction<any[]>>;
@@ -14,10 +13,8 @@ type BeerContextType = {
   setAbv: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-// Create the context with the defined type
 export const BeerContext = createContext<BeerContextType | undefined>(undefined);
 
-// Define the type for the children prop
 type BeerContextProviderProps = {
   children: ReactNode;
 

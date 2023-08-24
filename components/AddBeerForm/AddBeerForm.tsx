@@ -47,7 +47,6 @@ const AddBeerForm: React.FC<BeerDetailsProps> = ({
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     onAddBeer(beerInfo);
-    // Clear the form fields
     setBeerInfo({
       name: "",
       tagline: "",
