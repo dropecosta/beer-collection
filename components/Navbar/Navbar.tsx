@@ -56,8 +56,8 @@ const NavBar = () => {
   };
 
   return (
-    <header className="w-full  absolute z-10">
-      <nav className="max-w-[1440px] mx-auto flex justify-between items-center sm:px-16 px-6 py-4 bg-transparent">
+    <header className="w-full">
+      <nav className="max-w-[1440px] mx-auto flex xl:justify-between justify-center sm:items-center xl:flex-row flex-col sm:h-[300px] items-center sm:px-16 px-6 bg-transparent">
         <Link href="/" className="flex justify-center items-center">
           <div className="navbar__title">
           <h1 className="navbar__title-h1">Beer Gallery</h1>
@@ -67,8 +67,8 @@ const NavBar = () => {
         <SearchBar handleInput={handleInput} searchTerm={searchTerm} />     
         <Button
           title="Add new beer"
-          containerStyles="py-[16px] rounded-full"
-          textStyles="text-black"
+          containerStyles="xl:w-[150px] sm:w-[300px] w-full xl:my-0 my-5 rounded-full bg-gray-400"
+          textStyles="text-white text-[12px] my-2 leading-[17px] font-bold uppercase"
           handleClick={() => setIsOpen(true)}
         />
         <FiltersList
