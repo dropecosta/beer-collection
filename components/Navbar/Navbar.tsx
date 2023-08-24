@@ -20,6 +20,8 @@ interface Beer {
 }
 
 const NavBar = () => {
+  const { beersArray, setBeersArray, searchTerm, setSearchTerm, ph, setPh, abv, setAbv, setSortedBeers, sortBy, setSortBy } = useBeerContext();
+
   useEffect(() => {
     async function fetchBeers() {
       try {
@@ -32,7 +34,23 @@ const NavBar = () => {
     fetchBeers();
   }, []);
 
-  const { beersArray, setBeersArray, searchTerm, setSearchTerm, ph, setPh, abv, setAbv } = useBeerContext();
+  useEffect(() => {
+    const sortedData = [...beersArray];
+    if (sortBy === 'asc') {
+      sortedData.sort((a, b) => a.name.localeCompare(b.name));
+    } else if (sortBy === 'desc') {
+      sortedData.sort((a, b) => b.name.localeCompare(a.name));
+    }
+    setSortedBeers(sortedData);
+  }, [beersArray, sortBy]);
+
+  const handleSortClick = () => {
+    if (sortBy === 'asc') {
+      setSortBy('desc');
+    } else {
+      setSortBy('asc');
+    }
+  };
 
   const [isOpen, setIsOpen] = useState(false);
 
@@ -64,13 +82,20 @@ const NavBar = () => {
           <p>Choose your best beer</p>
         </div>
         </Link>
-        <SearchBar handleInput={handleInput} searchTerm={searchTerm} />     
+        <SearchBar handleInput={handleInput} searchTerm={searchTerm} /> 
+           
         <Button
           title="Add new beer"
           containerStyles="xl:w-[150px] sm:w-[300px] w-full xl:my-0 my-5 rounded-full bg-gray-400"
           textStyles="text-white text-[12px] my-2 leading-[17px] font-bold uppercase"
           handleClick={() => setIsOpen(true)}
         />
+        <button 
+          onClick={handleSortClick}
+          className="text-black text-[12px] xl:my-2 my-8 leading-[17px] font-bold uppercase"
+        >
+          {sortBy === 'asc' ? 'Sort Descending' : 'Sort Ascending'}
+        </button>
         <FiltersList
           className="navbar__filter-container"
           filterByABV={filterByABV}

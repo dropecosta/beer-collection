@@ -11,7 +11,7 @@ const FiltersList: React.FC<FiltersListProps> = ({
   filterByPH,
 }) => {
   return (
-    <>
+    <div className="xl:flex-col">
       <p className="filter__title">Filter Beers by:</p>
       <div className="filters__list">
         <div className="filter__options">
@@ -27,7 +27,7 @@ const FiltersList: React.FC<FiltersListProps> = ({
           </label>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

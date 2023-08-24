@@ -1,6 +1,8 @@
 'use client';
 
 import React, { createContext, useContext, useState, ReactNode } from "react";
+import { BeerListProps } from "@/Types/beerType";
+
 
 type BeerContextType = {
   beersArray: any[];
@@ -11,6 +13,10 @@ type BeerContextType = {
   setPh: React.Dispatch<React.SetStateAction<boolean>>;
   abv: boolean;
   setAbv: React.Dispatch<React.SetStateAction<boolean>>;
+  sortedBeers: BeerListProps[];
+  setSortedBeers: React.Dispatch<React.SetStateAction<BeerListProps[]>>;
+  sortBy: string;
+  setSortBy: React.Dispatch<React.SetStateAction<string>>;
 };
 
 export const BeerContext = createContext<BeerContextType | undefined>(undefined);
@@ -25,9 +31,11 @@ export const BeerContextProvider = ({ children }: BeerContextProviderProps) => {
   const [searchTerm, setSearchTerm] = useState("");
   const [ph, setPh] = useState(false);
   const [abv, setAbv] = useState(false);
+  const [sortedBeers, setSortedBeers] = useState<BeerListProps[]>([]);
+  const [sortBy, setSortBy] = useState<string>('');
 
   return (
-    <BeerContext.Provider value={{ beersArray, setBeersArray, searchTerm, setSearchTerm, ph, setPh, abv, setAbv }}>
+    <BeerContext.Provider value={{ beersArray, setBeersArray, searchTerm, setSearchTerm, ph, setPh, abv, setAbv, sortedBeers, setSortedBeers, sortBy, setSortBy }}>
       {children}
     </BeerContext.Provider>
   );

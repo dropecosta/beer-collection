@@ -7,24 +7,23 @@ import { BeerCard } from "../BeerCard";
 import { BeerListProps } from "@/Types/beerType";
 
 const BeerList: React.FC<BeerListProps> = () => {
-  const { beersArray, setBeersArray, searchTerm, ph, abv } = useBeerContext();
+  const { beersArray, setBeersArray, searchTerm, ph, abv, sortedBeers } = useBeerContext();
 
   useEffect(() => {
     async function fetchBeers() {
       try {
         const fetchedBeers = await getBeers();
         setBeersArray(fetchedBeers);
-        console.log(fetchedBeers)
       } catch (error) {
         console.error("Error fetching beers:", error);
       }
     }
     fetchBeers();
-  }, []);
+  }, [setBeersArray]);
 
   const isDataEmpty = !Array.isArray(beersArray) || beersArray.length < 1 || !beersArray;
 
-  const filterResults = beersArray.filter((result) => {
+  const filterResults = sortedBeers.filter((result) => {
     let beerHasMatched = true;
 
     if (searchTerm) {
