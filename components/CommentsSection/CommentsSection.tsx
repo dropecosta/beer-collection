@@ -12,7 +12,7 @@ interface CommentProps {
     setNewComment,
   }) => {
     return (
-      <div>
+      <>
         <div className="mt-4">
           <input
             type="text"
@@ -40,7 +40,7 @@ interface CommentProps {
           </ul>
         </div> : ''
         }
-      </div>
+      </>
     );
   };
 

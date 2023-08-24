@@ -25,10 +25,10 @@ const BeerCard: React.FC<BeerCardProps> = ({ beer }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="beer-card group">
+    <article className="beer-card group">
       <div className="beer-card__content">
         <h2 className="beer-card__content-title">{name}</h2>
-        <p className='beer-card__content-tagline'>{tagline}</p>
+        <p className="beer-card__content-tagline">{tagline}</p>
       </div>
       <div className="beer-card__image-container">
         <Image
@@ -37,10 +37,9 @@ const BeerCard: React.FC<BeerCardProps> = ({ beer }) => {
           alt="beer image"
           fill
           sizes="100%"
-          
         />
       </div>
-      <div className="relative flex w-full mt-10">
+      <section className="relative flex w-full mt-10">
         <div className="beer-card__icon-container">
           <div className="beer-card__icon">
             <Image src="/color-icon.svg" width={30} height={30} alt="ebc-icon" />
@@ -66,8 +65,8 @@ const BeerCard: React.FC<BeerCardProps> = ({ beer }) => {
           </div>
         </div>
         <BeerDetails isOpen={isOpen} closeModal={() => setIsOpen(false)} beer={beer} />
-      </div>
-    </div>
+      </section>
+    </article>
   );
 };
 

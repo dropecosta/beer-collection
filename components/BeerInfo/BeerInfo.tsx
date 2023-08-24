@@ -8,7 +8,7 @@ const BeerInfo: React.FC<BeerInfoProps> = ({ beer }) => {
   const { name, tagline, description, abv, ibu, ebc, food_pairing } = beer;
 
   return (
-    <div>
+    <>
       <div className="beer-info__content-title">
         <h2 className="beer-info__content-h2">{name}</h2>
         <p className="beer-info__content-tagline">{tagline}</p>
@@ -44,7 +44,7 @@ const BeerInfo: React.FC<BeerInfoProps> = ({ beer }) => {
           </ul>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
