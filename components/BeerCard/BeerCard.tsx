@@ -25,49 +25,46 @@ const BeerCard: React.FC<BeerCardProps> = ({ beer }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="car-card group">
-      <div className="car-card__content">
-        <h2 className="car-card__content-title">{name}</h2>
-        <p className='text-[14px] leading-[17px] text-center p-1'>
-          {tagline}
-        </p>
+    <div className="beer-card group">
+      <div className="beer-card__content">
+        <h2 className="beer-card__content-title">{name}</h2>
+        <p className='beer-card__content-tagline'>{tagline}</p>
       </div>
-
-      <div className="relative w-full h-40 my-3 object-contain">
+      <div className="beer-card__image-container">
         <Image
           src={image_url}
+          className="beer-card__img"
           alt="beer image"
-          layout="fill"
-          objectFit="contain"
+          fill
+          sizes="100%"
+          
         />
       </div>
-
       <div className="relative flex w-full mt-10">
-        <div className="flex w-full justify-between text-grey">
-          <div className="car-card__icon">
-            <Image src="/color-icon.svg" width={30} height={30} alt="seat" />
-            <p className="car-card__icon-text">{ebc} EBC</p>
+        <div className="beer-card__icon-container">
+          <div className="beer-card__icon">
+            <Image src="/color-icon.svg" width={30} height={30} alt="ebc-icon" />
+            <p className="beer-card__icon-text">{ebc} EBC</p>
           </div>
-          <div className="car-card__icon">
-            <Image src="/abv-icon.svg" width={30} height={30} alt="seat" />
-            <p className="car-card__icon-text">{abv} ABV</p>
-          </div>
-
-          <div className="car-card__icon">
-            <Image src="/hops-icon.svg" width={30} height={30} alt="seat" />
-            <p className="car-card__icon-text">{ibu} IBU</p>
+          <div className="beer-card__icon">
+            <Image src="/abv-icon.svg" width={30} height={30} alt="abv-icon" />
+            <p className="beer-card__icon-text">{abv} ABV</p>
           </div>
 
-          <div className="car-card__btn-container">
+          <div className="beer-card__icon">
+            <Image src="/hops-icon.svg" width={30} height={30} alt="ibu-icon" />
+            <p className="beer-card__icon-text">{ibu} IBU</p>
+          </div>
+
+          <div className="beer-card__btn-container">
             <Button
               title="View More"
-              containerStyles="w-full py-[16px] rounded-full bg-primary-blue"
+              containerStyles="w-full py-[16px] rounded-full bg-primary-blue group-hover:visible"
               textStyles="text-white text-[14px] leading-[17px] font-bold"
               handleClick={() => setIsOpen(true)}
             />
           </div>
         </div>
-
         <BeerDetails isOpen={isOpen} closeModal={() => setIsOpen(false)} beer={beer} />
       </div>
     </div>

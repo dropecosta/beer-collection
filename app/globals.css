@@ -11,7 +11,7 @@
   font-family: "Manrope", sans-serif;
 }
 
-/* START: General styles */
+/* General styles */
 .max-width {
   @apply max-w-[1440px] mx-auto;
 }
@@ -35,103 +35,136 @@
 .custom-btn {
   @apply flex flex-row relative justify-center items-center py-3 px-6 outline-none;
 }
-/* END: General styles */
 
+/* Home styles */
 
-
-/* START: Hero styles */
-.hero {
-  @apply flex xl:flex-row flex-col gap-5 relative z-0 max-w-[1440px] mx-auto;
+.home__beers-wrapper {
+  @apply grid 2xl:grid-cols-4 xl:grid-cols-3 md:grid-cols-2 grid-cols-1 w-full gap-8 pt-16;
 }
 
-.hero__title {
-  @apply 2xl:text-[72px] sm:text-[64px] text-[50px] font-extrabold;
+
+/* Navbar styles */
+
+.navbar__title {
+  @apply flex flex-col items-start justify-start text-black-100;
 }
 
-.hero__subtitle {
-  @apply text-[27px] text-black-100 font-light mt-5;
+.navbar__title-h1 {
+  @apply text-2xl font-extrabold uppercase;
 }
 
-.hero__image-container {
-  @apply xl:flex-[1.5] flex justify-end items-end w-full xl:h-screen;
-}
-
-.hero__image {
-  @apply relative xl:w-full w-[90%] xl:h-full h-[590px] z-0;
-}
-
-.hero__image-overlay {
-  @apply absolute xl:-top-24 xl:-right-1/2 -right-1/4 bg-hero-bg bg-repeat-round -z-10 w-full xl:h-screen h-[590px] overflow-hidden;
-}
-/* END: Hero styles */
-
-/* START: Home styles */
-
-.home__text-container {
-  @apply flex flex-col items-start justify-start gap-y-2.5 text-black-100;
-}
-
-.home__filters {
-  @apply mt-12 w-full flex-between items-center flex-wrap gap-5;
-}
-
-.home__filter-container {
+.navbar__filter-container {
   @apply flex justify-start flex-wrap items-center gap-2;
 }
 
-.home__beers-wrapper {
-  @apply grid 2xl:grid-cols-4 xl:grid-cols-3 md:grid-cols-2 grid-cols-1 w-full gap-8 pt-14;
+/* Searchbar styles */
+.searchbar {
+  @apply flex items-center justify-start max-sm:flex-col w-full relative max-sm:gap-4 max-w-3xl;
 }
 
-.home__error-container {
-  @apply mt-16 flex justify-center items-center flex-col gap-2;
+.searchbar__item {
+  @apply flex-1 max-sm:w-full flex justify-start items-center relative;
 }
-/* END: Home styles */
+
+.searchbar__input {
+  @apply w-full h-[48px] pl-12 p-4 bg-light-white rounded-r-full rounded-l-full max-sm:rounded-full outline-none cursor-pointer text-sm;
+}
 
 
-
-/* START: Car Card styles */
-.car-card {
+/* BeerCard styles */
+.beer-card {
   @apply flex flex-col p-6 text-black-100 bg-primary-blue-100  hover:shadow-md rounded-3xl;
 }
 
-.car-card__content {
+.beer-card__content {
   @apply w-full flex-col p-3 gap-2 justify-center h-20;
 }
 
-.car-card__content-title {
+.beer-card__content-title {
   @apply text-[22px] leading-[26px] font-bold capitalize text-center;
 }
 
-.car-card__price {
-  @apply flex mt-6 text-[32px] leading-[38px] font-extrabold;
+.beer-card__content-tagline {
+  @apply text-[14px] leading-[17px] text-center p-1;
 }
 
-.car-card__price-dollar {
-  @apply self-start text-[14px] leading-[17px] font-semibold;
-}
-
-.car-card__price-day {
-  @apply self-end text-[14px] leading-[17px] font-medium;
-}
-
-.car-card__image {
+.beer-card__image-container {
   @apply relative w-full h-40 my-3 object-contain;
 }
 
-.car-card__icon-container {
+.beer-card__img {
+  @apply w-[360px] h-[180px] object-contain;
+}
+
+.beer-card__icon-container {
   @apply flex group-hover:invisible w-full justify-between text-grey;
 }
 
-.car-card__icon {
+.beer-card__icon {
   @apply flex flex-col justify-center items-center gap-2;
 }
 
-.car-card__icon-text {
+.beer-card__icon-text {
   @apply text-[14px] leading-[17px];
 }
 
-.car-card__btn-container {
+.beer-card__btn-container {
   @apply hidden group-hover:flex absolute bottom-0 w-full z-10;
 }
-/* END: Car Card styles */
+
+/* BeerInfo styles */
+.beer-info__content-title {
+  @apply flex-1 flex flex-col gap-3;
+}
+
+.beer-info__content-h2 {
+  @apply text-[22px] leading-[26px] font-bold capitalize text-center;
+}
+
+.beer-info__content-tagline {
+  @apply text-[14px] leading-[17px] text-center p-1 flex-center mb-3;
+}
+
+.beer-info__content-description {
+  @apply text-grey flex-center text-center;
+}
+
+.beer-info__icon-container {
+  @apply mt-5 mb-5 flex flex-wrap gap-4 justify-between ;
+}
+
+.beer-info__icon {
+  @apply flex justify-between gap-5 text-right;
+}
+
+.beer-info__icon-text {
+  @apply text-black-100 font-semibold;
+}
+
+.beer-info__food-pairing {
+  @apply text-[13px] text-grey p-2 ml-5 list-disc;
+}
+
+
+/* CommentsSection styles */
+.comments__input {
+  @apply border border-gray-300 p-2 rounded-md w-full;
+}
+
+.comments__button {
+  @apply bg-blue-500 text-white px-4 py-2 rounded-md mt-5 mb-4;
+}
+
+.comments__li {
+  @apply text-[13px] text-gray-600 p-4 bg-primary-blue-100 mt-2 mb-2;
+}
+
+/* AddBeerForm styles */
+
+.add-beer-form__input {
+  @apply border border-gray-300 p-2 rounded-md w-full;
+}
+
+.add-beer-form__button {
+  @apply bg-blue-500 text-white px-4 py-2 rounded-md mt-5 mb-4;
+}

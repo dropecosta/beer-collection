@@ -13,7 +13,6 @@ export interface ButtonProps {
   handleClick?: MouseEventHandler<HTMLButtonElement>;
 }
 
-
 const Button = ({ isDisabled, btnType, containerStyles, textStyles, title, rightIcon, handleClick }: ButtonProps) => (
   <button
     disabled={isDisabled}

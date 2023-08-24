@@ -1,7 +1,8 @@
-import Footer from '@/components/Footer/Footer'
-import { Navbar } from '@/components/Navbar'
-import type { Metadata } from 'next'
-import './globals.css'
+import Footer from '@/components/Footer/Footer';
+import { Navbar } from '@/components/Navbar';
+import type { Metadata } from 'next';
+import { BeerContextProvider } from './context/context';
+import './globals.css';
 
 export const metadata: Metadata = {
   title: 'Beer Gallery',
@@ -16,9 +17,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="relative">
+      <BeerContextProvider>
         <Navbar />
         {children}
         <Footer />
+      </BeerContextProvider>
       </body>
     </html>
   )
