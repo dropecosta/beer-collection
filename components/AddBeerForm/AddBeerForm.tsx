@@ -1,6 +1,7 @@
 import { Fragment, useState, useEffect } from "react";
 import Image from "next/image";
 import { Dialog, Transition } from "@headlessui/react";
+import './addbeerform.css';
 
 interface BeerDetailsProps {
   isOpen: boolean;

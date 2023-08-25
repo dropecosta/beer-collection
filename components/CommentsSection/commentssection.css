@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+}
+
+/* CommentsSection styles */
+.comments__input {
+  @apply border border-gray-300 p-2 rounded-md w-full;
+}
+
+.comments__button {
+  @apply bg-gray-400 text-white px-4 py-2 rounded-md mt-5 mb-4;
+}
+
+.comments__li {
+  @apply text-[13px] text-gray-600 p-4 bg-primary-blue-100 mt-2 mb-2;
+}
+
+.rating {
+  @apply inline-flex items-center space-x-1 mt-2 mb-4;
+}
+

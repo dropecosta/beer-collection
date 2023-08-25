@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+}
+
+/* BeerCard styles */
+.beer-card {
+  @apply flex flex-col p-6 text-black-100 bg-primary-blue-100 hover:shadow-md rounded-3xl;
+}
+
+.beer-card__content {
+  @apply w-full flex-col p-3 gap-2 justify-center h-20;
+}
+
+.beer-card__content-title {
+  @apply text-[22px] leading-[26px] font-bold capitalize text-center;
+}
+
+.beer-card__content-tagline {
+  @apply text-[14px] leading-[17px] text-center p-1;
+}
+
+.beer-card__image-container {
+  @apply relative w-full h-40 my-3 object-contain;
+}
+
+.beer-card__img {
+  @apply w-[360px] h-[180px] object-contain;
+}
+
+.beer-card__icon-container {
+  @apply flex group-hover:invisible w-full justify-between text-grey;
+}
+
+.beer-card__icon {
+  @apply flex flex-col justify-center items-center gap-2;
+}
+
+.beer-card__icon-text {
+  @apply text-[14px] leading-[17px];
+}
+
+.beer-card__btn-container {
+  @apply hidden group-hover:flex absolute bottom-0 w-full z-10;
+}
+
+

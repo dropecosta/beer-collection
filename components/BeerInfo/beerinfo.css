@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+}
+
+/* General styles */
+.flex-center {
+  @apply flex items-center justify-center;
+}
+
+/* BeerInfo styles */
+.beer-info__content-title {
+  @apply flex-1 flex flex-col gap-3;
+}
+
+.beer-info__content-h2 {
+  @apply text-[22px] leading-[26px] font-bold capitalize text-center;
+}
+
+.beer-info__content-tagline {
+  @apply text-[14px] leading-[17px] text-center p-1 flex-center mb-3;
+}
+
+.beer-info__content-description {
+  @apply text-grey flex-center text-center;
+}
+
+.beer-info__icon-container {
+  @apply mt-5 mb-5 flex flex-wrap gap-4 justify-between ;
+}
+
+.beer-info__icon {
+  @apply flex justify-between gap-5 text-right;
+}
+
+.beer-info__icon-text {
+  @apply text-black-100 font-semibold;
+}
+
+.beer-info__food-pairing {
+  @apply text-[13px] text-grey p-2 ml-5 list-disc;
+}
+
+
+

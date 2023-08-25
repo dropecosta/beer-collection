@@ -8,6 +8,7 @@ import SearchBar from "../SearchBar/SearchBar";
 import  { FiltersList } from "../FiltersList";
 import { Button } from "../Button";
 import { AddBeerForm } from "../AddBeerForm";
+import './navbar.css';
 
 interface Beer {
   id: number;

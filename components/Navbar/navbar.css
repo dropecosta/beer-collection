@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+}
+
+/* Navbar styles */
+.navbar__container {
+  @apply max-w-[1440px] mx-auto flex xl:justify-between justify-center sm:items-center xl:flex-row flex-col sm:h-[300px] xl:h-[150px] xl:mt-0 mt-[30px] items-center sm:px-16 px-6 bg-transparent
+}
+
+.navbar__title {
+  @apply flex flex-col items-start justify-start text-black-100;
+}
+
+.navbar__title-h1 {
+  @apply text-2xl font-extrabold uppercase;
+}
+
+.navbar__filter-container {
+  @apply flex justify-start flex-wrap items-center gap-2;
+}

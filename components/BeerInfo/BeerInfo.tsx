@@ -1,5 +1,5 @@
 import Image from "next/image";
-
+import './beerinfo.css';
 interface BeerInfoProps {
   beer: {
     name: string;

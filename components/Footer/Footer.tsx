@@ -1,4 +1,5 @@
 import Link from "next/link";
+import './footer.css';
 
 const Footer = () => (
   <footer className='footer__container'>

@@ -1,5 +1,5 @@
 import React from "react";
-
+import './filterlist.css';
 interface FiltersListProps {
   filterByABV: () => void;
   filterByIbu: () => void;

@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+}
+
+/* Searchbar styles */
+.searchbar {
+  @apply flex xl:items-center xl:justify-start xl:w-[600px] w-[90%] xl:py-0 py-5 relative gap-4 max-w-3xl items-center justify-center;
+}
+
+.searchbar__item {
+  @apply flex-1 max-sm:w-full flex justify-start items-center relative;
+}
+
+.searchbar__input {
+  @apply xl:w-[550px] w-full h-[48px] pl-12 p-4 bg-primary-blue-100 rounded-r-full rounded-l-full rounded-full outline-none cursor-pointer text-sm;
+}
+
+

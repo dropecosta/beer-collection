@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Button } from "../Button";
 import { BeerDetails } from "../BeerDetails";
 import { BeerListProps } from "@/Types/beerType";
+import './beercard.css';
 
 interface BeerCardProps {
   beer: BeerListProps;
