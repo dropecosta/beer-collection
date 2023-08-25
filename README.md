@@ -1,7 +1,7 @@
 <div id='top'>
 
 <h1 align="center">🍺 Beer Collection</a></h1>
-<p align="center">A web application that can track customers' beer collection.</p>
+<p align="center">A web application that can track customers beer collection.</p>
 
 ![Application screen](https://raw.githubusercontent.com/dropecosta/beer-collection/41ab05eba52df19b538cb417008ae3a2575fd5f9/public/home.png)
 <br /><br />
