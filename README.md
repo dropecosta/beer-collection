@@ -3,11 +3,11 @@
 <h1 align="center">🍺 Beer Collection</a></h1>
 <p align="center">A web application that can track customers' beer collection. This application is part of a challenge proposed by IMPACT Commerce.</p>
 
-![Application screen](https://github.com/dropecosta/beer-collection/assets/13908414/66eeb5da-d0d3-4b0d-9206-849de833f959)
+![Application screen](https://raw.githubusercontent.com/dropecosta/beer-collection/41ab05eba52df19b538cb417008ae3a2575fd5f9/public/home.png)
 <br /><br />
-![Detailed view screen](https://github.com/dropecosta/beer-collection/assets/13908414/9b752c56-bd32-40a8-8dd4-c85a0258fb55)
+![Detailed view screen](https://raw.githubusercontent.com/dropecosta/beer-collection/41ab05eba52df19b538cb417008ae3a2575fd5f9/public/details.png)
 <br /><br />
-![Add new beer screen](https://github.com/dropecosta/beer-collection/assets/13908414/6496d0be-3d2a-460b-bb94-259f91520500)
+![Add new beer screen](https://raw.githubusercontent.com/dropecosta/beer-collection/master/public/addbeer.png)
 
 ### Build with
 
