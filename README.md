@@ -1,8 +1,99 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<div id='top'>
 
-## Getting Started
+<h1 align="center">🍺 Beer Collection</a></h1>
+<p align="center">A web application that can track customers' beer collection. This application is part of a challenge proposed by IMPACT Commerce.</p>
 
-First, run the development server:
+![Application screen](https://github.com/dropecosta/beer-collection/assets/13908414/66eeb5da-d0d3-4b0d-9206-849de833f959)
+<br /><br />
+![Detailed view screen](https://github.com/dropecosta/beer-collection/assets/13908414/9b752c56-bd32-40a8-8dd4-c85a0258fb55)
+<br /><br />
+![Add new beer screen](https://github.com/dropecosta/beer-collection/assets/13908414/6496d0be-3d2a-460b-bb94-259f91520500)
+
+### Build with
+
+![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
+![TypeScript](https://img.shields.io/badge/typescript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+
+### Features (Requirements)
+
+- [x] An overview of bottles in the collection (flexbox or grid layout)
+- [x] Detailed view
+- [x] Possibility to add new bottles
+- [x] You can use a remote API (https://punkapi.com/documentation/v2 or similar) to fill in
+additional data
+
+Inspiration for functionality if you have time:
+- [x] Sorting in list view (Sort by name, type, year, etc.).
+- [x] Filtering in list view (filter on type, year, etc.).
+- [x] Add the user's comment / notes / rating.
+- [x] Save entries on the device.
+
+Your solution will be evaluated on the following:
+• Code quality
+• Code architecture and organization
+• Does the solution work?
+• Does the layout work on both phone and desktop?
+• Implementing your own creative ideas
+
+Rules:
+• Use NextJS to build the web-app.
+• You are free to spend as much time as you want.
+• It must be clearly noted if there are parts of the code you have not written yourself.
+• You may want to use a build-setup - this setup is not included in the assessment.
+Please supply documentation for how to run the app (a CLI command like “npm start”
+or similar is fine).
+• Your solution must be handed in as a git repository (if private on github, please reach
+out to us, for who to add to the repo).
+• Add a readme file to the root of the project, explaining your architecture
+considerations, your priorities and whatever else you think could be important for us to
+know or pay attention to.
+• Feel free to substitute the “Beer collection” and API with something else
+
+### Component Description
+
+BeerList component:
+- Fetch the data from Punk API;
+- Contains logic to filter results;
+- Display 'loading' message while data is not yet available;
+
+BeerCard component:
+- Display information about the beers;
+- Title and subtitle formatting (truncate) according to available space;
+- Opens item details modal when clicking on the button that appears with the mouseHover event;
+
+BeerDetails component: 
+- Gather detailed information about the item;
+- Contains logic to handle comments and rating;
+
+CommentsSection component:  
+- Add the functionality to rate the beer select the amount of stars/rating and write a comment;
+- Saves information on the user's device through the localStorage API
+
+BeerInfo component: 
+- Gathers detailed information components and comments about the item;
+- Contains logic to handle comments and rating;
+
+Navbar component:
+- Header with application title, search bar;
+- Contains logic to search items by name;
+- Button and logic for adding a new item to the list;
+- Button and logic for ascending/descending sorting;
+- Buttons for filtering by alcoholic graduation and by bitterness level;
+
+FilterList component
+- Displays the UI for filtering items;
+
+Searchbar component
+- Displays the UI for search items by name;
+
+Footer component:
+- Displays the UI with signature of author and API information;
+
+
+### Available Scripts
+
+In the project directory, you can run:
 
 ```bash
 npm run dev
@@ -12,23 +103,19 @@ yarn dev
 pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Runs the test watcher in an interactive mode:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm test
+```
+All components come with the unit test file passing successfully.
+![unit tests](https://github.com/dropecosta/beer-collection/assets/13908414/cfe6ebaa-9c0d-4d3b-bdac-159c03276f49)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+All components come with the unit test file passing successfully.
+<br /><br />
+<a href='#top'>🔼 Back to top</a>
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Developed with 🧡 by Pedro Reis | dropecosta@gmail.com
