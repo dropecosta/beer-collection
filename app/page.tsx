@@ -1,8 +1,7 @@
 import React from "react";
 import { BeerList } from "@/components/BeerList";
-import { BeerListProps } from "@/Types/beerType";
 
-const Home: React.FC<BeerListProps> = async () => {
+const Home: React.FC = async () => {
   return (
     <main className="overflow-hidden">
       <div className="padding-x padding-y max-width">
