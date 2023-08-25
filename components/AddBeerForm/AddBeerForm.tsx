@@ -166,7 +166,7 @@ const AddBeerForm: React.FC<BeerDetailsProps> = ({
                       />
                     </div>
                     <div>
-                      <button className="add-beer-form__button" type="submit">Add Beer</button>
+                      <button className="addbeerform__button" type="submit">Add Beer</button>
                     </div>
                   </form>
                 </main>

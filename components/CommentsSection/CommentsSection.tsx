@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Rating } from "../Rating";
+import './commentssection.css';
 
 interface CommentsProps {
   commentsWithRating: { text: string; rating: number }[];
