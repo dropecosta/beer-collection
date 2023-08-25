@@ -85,8 +85,6 @@ Runs the test watcher in an interactive mode:
 ```bash
 npm test
 ```
-All components come with the unit test file passing successfully.
-
 
 All components have their unit test file successfully passing in the respective component folder.
 <br /><br />
