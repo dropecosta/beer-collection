@@ -89,7 +89,7 @@ All components come with the unit test file passing successfully.
 ![unit tests](https://github.com/dropecosta/beer-collection/assets/13908414/cfe6ebaa-9c0d-4d3b-bdac-159c03276f49)
 
 
-All components come with the unit test file passing successfully.
+All components have their unit test file successfully passing in the respective component folder.
 <br /><br />
 <a href='#top'>🔼 Back to top</a>
 
