@@ -20,7 +20,7 @@ interface Beer {
 }
 
 const NavBar = () => {
-  const { beersArray, setBeersArray, searchTerm, setSearchTerm, ph, setPh, abv, setAbv, setSortedBeers, sortBy, setSortBy } = useBeerContext();
+  const { beersArray, setBeersArray, searchTerm, setSearchTerm, ibu, setIbu, abv, setAbv, setSortedBeers, sortBy, setSortBy } = useBeerContext();
 
   useEffect(() => {
     async function fetchBeers() {
@@ -54,8 +54,8 @@ const NavBar = () => {
 
   const [isOpen, setIsOpen] = useState(false);
 
-  const filterByPH = () => {
-    setPh(!ph);
+  const filterByIbu = () => {
+    setIbu(!ibu);
   };
 
   const filterByABV = () => {
@@ -99,7 +99,7 @@ const NavBar = () => {
         <FiltersList
           className="navbar__filter-container"
           filterByABV={filterByABV}
-          filterByPH={filterByPH}
+          filterByIbu={filterByIbu}
         />
       </nav>
       <AddBeerForm isOpen={isOpen} closeModal={() => setIsOpen(false)} onAddBeer={addNewBeer} />

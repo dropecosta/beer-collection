@@ -4,19 +4,10 @@ import { useState } from "react";
 import Image from "next/image";
 import { Button } from "../Button";
 import { BeerDetails } from "../BeerDetails";
-
-interface Beer {
-  id: number;
-  name: string;
-  tagline: string;
-  image_url: string;
-  ebc: number;
-  abv: number;
-  ibu: number;
-}
+import { BeerListProps } from "@/Types/beerType";
 
 interface BeerCardProps {
-  beer: Beer;
+  beer: BeerListProps;
 }
 
 const BeerCard: React.FC<BeerCardProps> = ({ beer }) => {

@@ -7,7 +7,7 @@ import { BeerCard } from "../BeerCard";
 import { BeerListProps } from "@/Types/beerType";
 
 const BeerList: React.FC<BeerListProps> = () => {
-  const { beersArray, setBeersArray, searchTerm, ph, abv, sortedBeers } = useBeerContext();
+  const { beersArray, setBeersArray, searchTerm, ibu, abv, sortedBeers } = useBeerContext();
 
   useEffect(() => {
     async function fetchBeers() {
@@ -34,8 +34,8 @@ const BeerList: React.FC<BeerListProps> = () => {
       beerHasMatched = beerHasMatched && result.abv > 6;
     }
 
-    if (ph) {
-      beerHasMatched = beerHasMatched && result.ph < 4;
+    if (ibu) {
+      beerHasMatched = beerHasMatched && result.ibu < 50;
     }
 
     return beerHasMatched;

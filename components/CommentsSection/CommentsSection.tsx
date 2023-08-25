@@ -20,6 +20,8 @@ const CommentsSection: React.FC<CommentsProps> = ({
 }) => {
   const [localRating, setLocalRating] = useState<number>(rating); 
 
+  console.log('commentsWithRating', commentsWithRating)
+
   return (
     <>
       <div className="mt-4">
@@ -49,7 +51,7 @@ const CommentsSection: React.FC<CommentsProps> = ({
           <h3>Comments:</h3>
           <ul>
             {commentsWithRating.map((comment, index) => (<>
-              <li className="comments__li" key={index}>
+              <li className="comments__li" key={index.toString()}>
                 <p>Rating: <span className="pl-1 text-[13px] text-black font-bold">{comment.rating}</span></p>
                 <p>Comment: <span className="pl-1 text-[13px] text-black font-bold">{comment.text}</span></p>
               </li>

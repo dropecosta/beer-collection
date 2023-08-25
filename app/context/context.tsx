@@ -9,8 +9,8 @@ type BeerContextType = {
   setBeersArray: React.Dispatch<React.SetStateAction<any[]>>;
   searchTerm: string;
   setSearchTerm: React.Dispatch<React.SetStateAction<string>>;
-  ph: boolean;
-  setPh: React.Dispatch<React.SetStateAction<boolean>>;
+  ibu: boolean;
+  setIbu: React.Dispatch<React.SetStateAction<boolean>>;
   abv: boolean;
   setAbv: React.Dispatch<React.SetStateAction<boolean>>;
   sortedBeers: BeerListProps[];
@@ -29,13 +29,13 @@ type BeerContextProviderProps = {
 export const BeerContextProvider = ({ children }: BeerContextProviderProps) => {
   const [beersArray, setBeersArray] = useState<any[]>([]);
   const [searchTerm, setSearchTerm] = useState("");
-  const [ph, setPh] = useState(false);
+  const [ibu, setIbu] = useState(false);
   const [abv, setAbv] = useState(false);
   const [sortedBeers, setSortedBeers] = useState<BeerListProps[]>([]);
   const [sortBy, setSortBy] = useState<string>('');
 
   return (
-    <BeerContext.Provider value={{ beersArray, setBeersArray, searchTerm, setSearchTerm, ph, setPh, abv, setAbv, sortedBeers, setSortedBeers, sortBy, setSortBy }}>
+    <BeerContext.Provider value={{ beersArray, setBeersArray, searchTerm, setSearchTerm, ibu, setIbu, abv, setAbv, sortedBeers, setSortedBeers, sortBy, setSortBy }}>
       {children}
     </BeerContext.Provider>
   );

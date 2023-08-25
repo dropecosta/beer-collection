@@ -41,7 +41,7 @@ const BeerInfo: React.FC<BeerInfoProps> = ({ beer }) => {
         <div>
           <h3 className="pb-3">Food Pairing:</h3>
           <ul className="mb-3">
-            {food_pairing.map((item: any, index: any) => (
+            {food_pairing?.map((item: any, index: any) => (
               <li
                 className="beer-info__food-pairing"
                 key={index}

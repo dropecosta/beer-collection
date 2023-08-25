@@ -2,13 +2,13 @@ import React from "react";
 
 interface FiltersListProps {
   filterByABV: () => void;
-  filterByPH: () => void;
+  filterByIbu: () => void;
   className?: string;
 }
 
 const FiltersList: React.FC<FiltersListProps> = ({
   filterByABV,
-  filterByPH,
+  filterByIbu,
 }) => {
   return (
     <div className="xl:flex-col">
@@ -21,9 +21,9 @@ const FiltersList: React.FC<FiltersListProps> = ({
           </label>
         </div>
         <div className="filter__options">
-          <input onClick={filterByPH} type="checkbox" id="ph" name="ph" />
-          <label className="filter__label" htmlFor="ph">
-            High Acidity (pH &lsaquo; 4.0%)
+          <input onClick={filterByIbu} type="checkbox" id="ibu" name="ibu" />
+          <label className="filter__label" htmlFor="ibu">
+            Bitterness (ibu &lsaquo; 50)
           </label>
         </div>
       </div>
