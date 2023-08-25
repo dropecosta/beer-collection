@@ -20,8 +20,6 @@ const CommentsSection: React.FC<CommentsProps> = ({
 }) => {
   const [localRating, setLocalRating] = useState<number>(rating); 
 
-  console.log('commentsWithRating', commentsWithRating)
-
   return (
     <>
       <div className="mt-4">
